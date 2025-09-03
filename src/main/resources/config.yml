@@ -38,4 +38,4 @@ bossbar:
   enabled: true
   title: "&a&lFishing Event &f- &b%time% &fseconds left"
   color: GREEN
-  style: SOLID
+  style: SEGMENTED_10

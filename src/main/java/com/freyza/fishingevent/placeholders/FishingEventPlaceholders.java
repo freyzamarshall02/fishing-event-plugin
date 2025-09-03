@@ -43,9 +43,10 @@ public class FishingEventPlaceholders extends PlaceholderExpansion {
             String rankStr = params.substring("top_name_".length());
             try {
                 int rank = Integer.parseInt(rankStr);
-                return plugin.getScoreManager().getTopPlayerName(rank);
+                String name = plugin.getScoreManager().getTopPlayerName(rank);
+                return name.isEmpty() ? "None" : name;
             } catch (NumberFormatException e) {
-                return "";
+                return "None";
             }
         }
         
@@ -55,9 +56,9 @@ public class FishingEventPlaceholders extends PlaceholderExpansion {
             try {
                 int rank = Integer.parseInt(rankStr);
                 int score = plugin.getScoreManager().getTopPlayerScore(rank);
-                return score > 0 ? String.valueOf(score) : "";
+                return String.valueOf(score);
             } catch (NumberFormatException e) {
-                return "";
+                return "0";
             }
         }
         
@@ -68,7 +69,7 @@ public class FishingEventPlaceholders extends PlaceholderExpansion {
         
         // Handle event status: %fishingevent_active%
         if (params.equals("active")) {
-            return plugin.getEventManager().isEventActive() ? "true" : "false";
+            return plugin.getEventManager().isEventActive() ? "Active" : "Inactive";
         }
         
         // Handle remaining time: %fishingevent_time_left%
