@@ -1,0 +1,41 @@
+# Fishing Event Plugin Configuration
+
+# Minimum players required to start an event
+min-players: 2
+
+# Enable or disable prize rewards
+prizes-enabled: true
+
+# Rewards for winners (executed as console commands)
+# %player% will be replaced with the winner's name
+prizes:
+  1: "give %player% diamond 3"
+  2: "give %player% gold_ingot 5"
+  3: "give %player% iron_ingot 10"
+
+# Scoring per fish type
+fish-scores:
+  COD: 1
+  SALMON: 2
+  TROPICAL_FISH: 3
+  PUFFERFISH: 5
+
+# Messages
+messages:
+  event-started: "&a[FishingEvent] &fFishing event has started! Duration: &b%duration% &fseconds"
+  event-stopped: "&c[FishingEvent] &fFishing event has been stopped!"
+  event-ended: "&a[FishingEvent] &fFishing event has ended!"
+  not-enough-players: "&c[FishingEvent] &fNot enough players online! Minimum required: &b%min%"
+  already-running: "&c[FishingEvent] &fAn event is already running!"
+  no-event-running: "&c[FishingEvent] &fNo event is currently running!"
+  leaderboard-reset: "&a[FishingEvent] &fLeaderboard has been reset!"
+  config-reloaded: "&a[FishingEvent] &fConfiguration has been reloaded!"
+  fish-caught: "&a[FishingEvent] &b%player% &fcaught a &e%fish% &fand gained &a%score% &fpoints!"
+  winner-announcement: "&a[FishingEvent] &fWinner #%rank%: &b%player% &fwith &a%score% &fpoints!"
+
+# Boss bar settings
+bossbar:
+  enabled: true
+  title: "&a&lFishing Event &f- &b%time% &fseconds left"
+  color: GREEN
+  style: SOLID

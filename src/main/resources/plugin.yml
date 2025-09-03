@@ -1,0 +1,34 @@
+name: FishingEventPlugin
+version: '${project.version}'
+main: com.freyza.fishingevent.FishingEventPlugin
+api-version: '1.21'
+author: freyza
+description: A fishing event plugin with leaderboards and prizes
+depend: [PlaceholderAPI]
+
+commands:
+  fishevent:
+    description: Start a fishing event
+    usage: /fishevent start <duration>
+    permission: fishingevent.admin
+    aliases: [fe]
+  fishstop:
+    description: Stop the current fishing event
+    usage: /fishstop
+    permission: fishingevent.admin
+  fishreset:
+    description: Reset fishing event leaderboards
+    usage: /fishreset
+    permission: fishingevent.admin
+  fishreload:
+    description: Reload the fishing event plugin
+    usage: /fishreload
+    permission: fishingevent.admin
+
+permissions:
+  fishingevent.admin:
+    description: Access to all fishing event admin commands
+    default: op
+  fishingevent.participate:
+    description: Can participate in fishing events
+    default: true
