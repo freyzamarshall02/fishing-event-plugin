@@ -89,9 +89,9 @@ fish-scores:
 
 If you encounter any issues or have suggestions, please open an issue on the GitHub repository.
 
-## License
+## Note
 
-This project is licensed under the MIT License.
+Gatau bjir gabut aja pgn bikin ginian aokwkkw
 
 ---
 
