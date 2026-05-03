@@ -75,7 +75,7 @@ fish-scores:
 
 ## Dependencies
 
-- **Required**: Paper 1.21.8+ (or compatible)
+- **Required**: Paper 1.21.8+ (26.1 Version Supported Too)
 - **Required**: PlaceholderAPI
 
 ## Building from Source
